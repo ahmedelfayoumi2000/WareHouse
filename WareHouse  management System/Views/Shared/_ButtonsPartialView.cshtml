@@ -1,0 +1,14 @@
+﻿@model Guid
+<td>
+    <div class="d-flex mr-2">
+        <a asp-action="Details" asp-route-id="@Model" class="btn btn-warning button-link">
+            <i class="fas fa-eye icon-inside-button"></i> Details
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model" class="btn btn-success button-link">
+            <i class="fas fa-edit icon-inside-button"></i> Update
+        </a>
+        <a asp-action="Delete" asp-route-id="@Model" class="btn btn-danger button-link">
+            <i class="fas fa-trash icon-inside-button"></i> Delete
+        </a>
+    </div>
+</td>

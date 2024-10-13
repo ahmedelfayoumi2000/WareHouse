@@ -1,0 +1,21 @@
+﻿@* @model WareHouse__management_System.Models.Category *@
+@model CategoryViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Category</h4>
+    <hr />
+    <partial name="PartialViews/DeleteDetailsCategoryPartialView" />
+</div>
+
+<div class="d-flex">
+
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-success button-link">Edit</a>
+    <a asp-action="Index" class="btn btn-danger button-link">Back to List</a>
+</div>
+

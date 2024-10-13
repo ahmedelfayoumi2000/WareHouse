@@ -1,0 +1,37 @@
+﻿@model WareHouse__management_System.Models.Product
+<dt class="col-sm-2">
+    @Html.DisplayNameFor(model => model.Name)
+</dt>
+<dd class="col-sm-10">
+    @Html.DisplayFor(model => model.Name)
+</dd>
+<dt class="col-sm-2">
+    @Html.DisplayNameFor(model => model.Description)
+</dt>
+<dd class="col-sm-10">
+    @Html.DisplayFor(model => model.Description)
+</dd>
+<dt class="col-sm-2">
+    @Html.DisplayNameFor(model => model.Cost)
+</dt>
+<dd class="col-sm-10">
+    @Html.DisplayFor(model => model.Cost)
+</dd>
+<dt class="col-sm-2">
+    @Html.DisplayNameFor(model => model.Price)
+</dt>
+<dd class="col-sm-10">
+    @Html.DisplayFor(model => model.Price)
+</dd>
+<dt class="col-sm-2">
+    @Html.DisplayNameFor(model => model.Count)
+</dt>
+<dd class="col-sm-10">
+    @Html.DisplayFor(model => model.Count)
+</dd>
+<dt class="col-sm-2">
+    @Html.DisplayNameFor(model => model.ImageURL)
+</dt>
+<dd class="col-sm-10">
+    <img src="@Url.Content(Model.ImageURL)" alt="" style="width: 180px; height:180px" />
+</dd>

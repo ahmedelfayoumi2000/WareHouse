@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" style="height:600px; width:500px;" src="https://img.freepik.com/free-vector/warehouse-isometric-composition_1284-16052.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" style="height:600px;" src="https://wareiq-prelogin.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/08/29161811/warehouse-management-system.jpeg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" style="height:600px;" src="https://assets-global.website-files.com/63a40b5d0bd7064cf2860235/63bbf5d7280184391c383229_176)-warehouse-management.webp" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="custom-prev-text">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="custom-next-text">Next</span>
+        </a>
+
+    </div>
+
+@* <style>
+    .carousel-item {
+        transition: transform 0.5s ease-in-out;
+    }
+
+        .carousel-item.active {
+            transform: translateX(0);
+        }
+
+        .carousel-item.next,
+        .carousel-item.prev {
+            transform: translateX(-100%); /* Adjust value for desired offset */
+        }
+
+</style>
+ *@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            interval: false
+        });
+
+        $('.carousel-control-prev').click(function () {
+            $('.carousel').carousel('prev');
+        });
+
+        $('.carousel-control-next').click(function () {
+            $('.carousel').carousel('next');
+        });
+    });
+</script>
+
+

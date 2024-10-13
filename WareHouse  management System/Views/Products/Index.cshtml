@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WareHouse__management_System.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="text-align: center;">
+    <h1>Products</h1>
+</div>
+
+<div class="row justify-content-center align-items-center mt-3" style="padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div class="col-md-6 offset-md-3">
+        <div class="row">
+            <div class="col-3">
+                <a asp-action="Create" class="btn btn-primary button-link">NewProduct</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Name)</td>
+                <td>@Html.DisplayNameFor(model => model.Description)</td>
+                <td>@Html.DisplayNameFor(model => model.Cost)</td>
+                <td>@Html.DisplayNameFor(model => model.Price)</td>
+                <td>@Html.DisplayNameFor(model => model.Count)</td>
+                <td>@Html.DisplayNameFor(model => model.ImageURL)</td>
+                <td>@Html.DisplayNameFor(model => model.category)</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cost)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Count)</td>
+                    <td><img src="@Url.Content(item.ImageURL)" alt="" style="width: 180px; height: 180px" /></td>
+                    <td>@Html.DisplayFor(modelItem => item.category.Name)</td>
+                    <partial name="_ButtonsPartialView" model="@item.Id" />
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info mt-3" role="alert">
+        <i class="fas fa-info-circle"></i> There are NO Products!!
+    </div>
+}
+
+<style>
+    .button-link {
+        margin-right: 10px;
+    }
+
+    .animated-input {
+        border: 2px solid #3f51b5;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+        .animated-input:focus {
+            border-color: #8bc34a;
+            box-shadow: 0 0 5px #8bc34a;
+        }
+
+    .animated-button {
+        transition: all 0.3s;
+    }
+
+        .animated-button:hover {
+            background-color: #4caf50;
+            border-color: #4caf50;
+        }
+</style>
